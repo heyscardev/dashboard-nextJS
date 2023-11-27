@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { IoCalculator, IoEgg, IoHome, IoLogoReact } from "react-icons/io5";
+import UserImage from "@/assets/user.jpeg";
 import SideMenuItem from "./SideMenuItem";
 const items = [
   {
@@ -45,9 +46,9 @@ export const Sidebar = () => {
           <span>
             <Image
               className="rounded-full w-8 h-8"
-              width={512}
-              height={512}
-              src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
+              width={128}
+              height={128}
+              src={UserImage}
               alt="profile"
             />
           </span>

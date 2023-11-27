@@ -1,7 +1,7 @@
-import type { PokemonResponse, SimplePokemon } from "@/pokemons";
+import type { PokemonsResponse, SimplePokemon } from "@/pokemons";
 import PokemonGrid from "../../../pokemons/components/PokemonGrid";
-import { notFound } from "next/navigation";
-export const revalidate = 60;
+
+export const revalidate = 5;
 const getPokemons = async (
   offset = 0,
   limit = 20
@@ -9,7 +9,7 @@ const getPokemons = async (
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
   );
-  const data: PokemonResponse = await res.json();
+  const data: PokemonsResponse = await res.json();
   const formatedData: SimplePokemon[] = data.results.map(({ name, url }) => ({
     id: url.split("/").at(-2)!,
     name,
@@ -24,7 +24,7 @@ const Pokemonspage = async () => {
   );
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center p-2">
       <span className="text-xl">
         Listado de pokemones <small>estaticos</small>
         <PokemonGrid pokemons={pokemons} />
