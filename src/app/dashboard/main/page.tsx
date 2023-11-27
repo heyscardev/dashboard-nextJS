@@ -1,5 +1,4 @@
-import { SimpleWidget } from "@/components";
-import { CartCounter } from "@/shopping-cart";
+import { WidgetGrid } from "@/components";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,8 +7,10 @@ export const metadata: Metadata = {
 };
 export default function MainPage() {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <SimpleWidget />
+    <div className=" flex h-full w-full flex-col ">
+      <h1 className="text-5xl my-5 mx-4">Admin Dashboard</h1>
+
+      <WidgetGrid />
     </div>
   );
 }
