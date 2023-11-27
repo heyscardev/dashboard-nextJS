@@ -1,3 +1,4 @@
-export * from "./Sidebar";
+export * from "./sidebar";
+export * from "./dashboard";
 
 //client components
