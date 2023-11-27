@@ -1,7 +1,9 @@
+import { CartCounter } from "@/shopping-cart";
+
 export default function MainPage() {
   return (
-    <div>
-      <h1 className="text-8xl">Main</h1>
+    <div className="min-h-screen flex justify-center items-center">
+      <CartCounter value={10} />
     </div>
   );
 }
