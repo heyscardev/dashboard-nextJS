@@ -3,7 +3,9 @@ import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
 interface PokemonState {
   [key: string]: SimplePokemon;
 }
-const initialState: PokemonState = { 1: { id: "1", name: "bulbasor" } };
+const initialState: PokemonState = {
+  // 1: { id: "1", name: "bulbasor" }
+};
 
 const pokemonsSlice = createSlice({
   name: "pokemon",
