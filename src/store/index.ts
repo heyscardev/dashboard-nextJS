@@ -2,11 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 import counter from "./counter/counterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import type { TypedUseSelectorHook } from "react-redux";
+import pokemons from "./pokemons/pokemons";
 
 // ...
 
 export const store = configureStore({
-  reducer: { counter },
+  reducer: { counter, pokemons },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
