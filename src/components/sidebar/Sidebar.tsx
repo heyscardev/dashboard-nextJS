@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { IoCalculator, IoEgg, IoHome, IoLogoReact } from "react-icons/io5";
 import UserImage from "@/assets/user.jpeg";
-import SideMenuItem from "./SideMenuItem";
+import { SideMenuItem } from ".";
+
 const items = [
   {
     path: "/dashboard/main",
@@ -63,5 +64,3 @@ export const Sidebar = () => {
     </div>
   );
 };
-
-export default Sidebar;

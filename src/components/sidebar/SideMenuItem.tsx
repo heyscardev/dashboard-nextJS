@@ -28,5 +28,3 @@ export const SideMenuItem = ({ icon, path, subtitle, title }: Props) => {
     </Link>
   );
 };
-
-export default SideMenuItem;
