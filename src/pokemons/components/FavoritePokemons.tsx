@@ -10,13 +10,12 @@ interface PokemonsObj {
 }
 
 const FavoritePokemons = () => {
-  const favorites: SimplePokemon[] = useAppSelector(({ pokemons }) =>
-    Object.values(pokemons)
+  const favorites = useAppSelector((state) =>
+    Object.values(state.pokemons.favorites)
   );
-  const [pokemons, setpokemons] = useState<SimplePokemon[]>(favorites);
 
-  return pokemons.length ? (
-    <PokemonGrid pokemons={pokemons} />
+  return favorites.length ? (
+    <PokemonGrid pokemons={favorites} />
   ) : (
     <NoFavorites />
   );
